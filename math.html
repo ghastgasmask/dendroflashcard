@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dendroid Notes</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+  
+<body>
+  <div class="tabs">
+    <div class="tab active">Math</div> <!-- popolnite svoi activ 🗣🗣 -->
+    <div class="tab">Physics</div>
+  </div>
+  
+  <div class="card-korobka">
+    <div class="card" onclick="flipCard()">
+      
+      <div class="hint" onclick="event.stopPropagation(); showHint()">
+          <img class="lightbulb-icon" src="lightbulb.png">
+          <div class="hint-box" id="hint-box"></div>
+      </div>
+      
+      <div class="card-content">
+        <div class="front"></div>
+        <div class="back"></div>
+      </div>
+      
+    </div>
+  </div>
+  
+  <div class="kletka-navigaciiya"> <!-- это та зеленая строчка снизу -->
+    <div class = "go-left">
+        <button onclick="prevCard()"><img class = "strekla-vlevo" src = "60606.png"></button>
+        <div class = "tooltip-0">Previous Flashcard</div>
+    </div>
+    <span id="card-count">1 of 10 cards 💀🤠</span> <!-- почему то эмодзики не показываются -->
+    <div class = "go-right">
+        <button onclick="nextCard()"><img class = "strekla-vpravo" src = "60606right.png"></button>
+        <div class = "tooltip-1">Next Flashcard</div>
+    </div>
+  </div>
+
+  <div class="title">
+    <img src="dendroheart.png" alt="icon">
+    <p>Dendro Notes</p> 
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
